@@ -9,6 +9,7 @@
 session_start();
 
 //Include Config
+require ('classes/messages.php');
 require('config.php');
 require ('classes/bootstrap.php');
 // base controller

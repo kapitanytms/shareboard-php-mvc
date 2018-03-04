@@ -13,6 +13,10 @@ class UserModel extends Model {
         $password = md5($post['password']);
 
         if($post['submit']) {
+            if($post['name'] == '' || $post['email'] == '' ||  $post['password'] == '') {
+                Messages::setMsg('Please fill in all fields!', 'error');
+                return;
+            }
 //            die("Submitted");
             // Insert into MySQL
             $this->query('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)');
@@ -54,7 +58,8 @@ class UserModel extends Model {
                 header('Location: '.ROOT_URL.'shares');
 
             } else {
-                echo 'Incorrect Login';
+//                echo 'Incorrect Login';
+                Messages::setMsg('Incorrect Login', 'error');
             }
 
         }
