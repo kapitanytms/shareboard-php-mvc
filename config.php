@@ -7,5 +7,5 @@ define("DB_PASS", "01123");
 define("DB_NAME", "shareboard");
 
 // Define URL
-define("ROOT_PATH", "/");
-define("ROOT_URL", "http://localhost/php.course_project");
+define("ROOT_PATH", "/php.course_project/");
+define("ROOT_URL", "http://localhost/php.course_project/");

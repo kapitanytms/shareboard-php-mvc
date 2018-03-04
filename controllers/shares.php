@@ -9,7 +9,12 @@
 class Shares extends Controller {
     protected function index() {
 //        echo 'SHARES/INDEX';
+    $viewModel = new ShareModel();
+    $this->returnView($viewModel->index(), true);
+    }
+    protected function add() {
+//        echo 'SHARES/INDEX';
         $viewModel = new ShareModel();
-        $this->returnView($viewModel->index(), true);
+        $this->returnView($viewModel->add(), true);
     }
 }
