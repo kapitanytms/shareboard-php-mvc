@@ -5,6 +5,9 @@
  * Date: 2018-03-04
  * Time: 12:05 PM
  */
+//Start session
+session_start();
+
 //Include Config
 require('config.php');
 require ('classes/bootstrap.php');
